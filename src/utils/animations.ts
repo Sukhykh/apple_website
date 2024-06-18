@@ -1,10 +1,13 @@
+import { MutableRefObject } from 'react'
+import { Group } from 'three'
+
 export const animateWithGsapTimeline = (
-	timeline,
-	rotationRef,
-	rotationState,
-	firstTarget,
-	secondTarget,
-	animationProps
+  timeline: GSAPTimeline,
+  rotationRef: MutableRefObject<Group>,
+  rotationState: number,
+  firstTarget: string,
+  secondTarget: string,
+  animationProps: Record<string, any>
 ) => {
 	timeline.to(rotationRef.current.rotation, {
 		y: rotationState,

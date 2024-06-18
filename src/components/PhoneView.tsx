@@ -2,10 +2,21 @@ import Lights from '@components/Lights'
 import Loader from '@components/Loader'
 import Scene from '@components/Scene'
 import { OrbitControls, PerspectiveCamera, View } from '@react-three/drei'
-import { Suspense } from 'react'
-import { Vector3 } from 'three'
+import { Model } from '@shared/index'
+import { MutableRefObject, Suspense } from 'react'
+import { Group, Vector3 } from 'three'
 
-const ModelView = ({
+interface ModelViewProps {
+  index: number
+  groupRef: MutableRefObject<Group>
+  gsapType: string
+  controlRef: MutableRefObject<any>
+  setRotationState: (rotation: number) => void
+  item: Model
+  size: string
+}
+
+const PhoneView: React.FC<ModelViewProps> = ({
 	index,
 	groupRef,
 	gsapType,
@@ -47,4 +58,4 @@ const ModelView = ({
 	)
 }
 
-export default ModelView
+export default PhoneView
