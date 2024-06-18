@@ -1,5 +1,6 @@
 import Hero from '@components/Hero'
 import Highlights from '@components/Highlights'
+import Model from '@components/Model'
 import Navigation from '@components/Navigation'
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
 			<Navigation />
 			<Hero />
 			<Highlights />
+			<Model />
 		</main>
 	)
 }

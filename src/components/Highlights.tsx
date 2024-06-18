@@ -23,9 +23,9 @@ const Highlights = () => {
 			id='highlights'>
 			<div className='screen-max-width'>
 				<div className='mb-12 w-full md:flex items-end justify-between'>
-					<h1 className='section-heading' id='title'>
+					<h2 className='section-heading' id='title'>
 						Get the highlights
-					</h1>
+					</h2>
 
 					<div className='flex flex-wrap items-end gap-5'>
 						<p className='link'>
