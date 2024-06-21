@@ -61,8 +61,6 @@ const Phone = () => {
 		})
 	}, [])
 
-	const rootElement = document.getElementById('root')
-
 	return (
 		<section className='common-padding'>
 			<div className='screen-max-width'>
@@ -92,21 +90,19 @@ const Phone = () => {
 							size={size}
 						/>
 
-						{rootElement && (
-							<Canvas
-								className='w-full h-full'
-								style={{
-									position: 'fixed',
-									top: 0,
-									bottom: 0,
-									left: 0,
-									right: 0,
-									overflow: 'hidden',
-								}}
-								eventSource={rootElement}>
-								<View.Port />
-							</Canvas>
-						)}
+						<Canvas
+							className='w-full h-full'
+							style={{
+								position: 'fixed',
+								top: 0,
+								bottom: 0,
+								left: 0,
+								right: 0,
+								overflow: 'hidden',
+							}}
+							eventSource={document.getElementById('root')!}>
+							<View.Port />
+						</Canvas>
 					</div>
 
 					<div className='mx-auto w-full'>
