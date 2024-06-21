@@ -1,7 +1,10 @@
+import Features from '@components/Features'
 import Hero from '@components/Hero'
 import Highlights from '@components/Highlights'
-import Phone from '@components/Phone'
+import HowItWorks from '@components/HowItWorks'
 import Navigation from '@components/Navigation'
+import Phone from '@components/Phone'
+import * as Sentry from '@sentry/react'
 
 const App = () => {
 	return (
@@ -10,8 +13,12 @@ const App = () => {
 			<Hero />
 			<Highlights />
 			<Phone />
+			<Features />
+			<HowItWorks />
 		</main>
 	)
 }
 
-export default App
+const ProfiledApp = Sentry.withProfiler(App)
+
+export default ProfiledApp
